@@ -1,0 +1,53 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Register</title>-->
+<!--       <style>-->
+<!--		body {-->
+<!--			background-color: #1D4350;-->
+<!--		}-->
+<!--		form {-->
+<!--			background-color: #0A6A8B;-->
+<!--		button{-->
+<!--		    background-color:red;-->
+<!--		}-->
+<!--       </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Register Page</h1>-->
+<!--    <pre>-->
+<!--    <form  method="post">-->
+<!--        {% csrf_token %}-->
+<!--        <label for="username">Username:</label> <input type="text" id="username" name="username" required><br>-->
+
+<!--        <label for="password">Password:</label> <input type="password" id="password" name="password" required><br>-->
+
+<!--        <label for="confirm_password">Confirm Password:</label> <input type="password" id="confirm_password" name="confirm_password" required><br>-->
+
+<!--                    <button type="submit"><a href="{% url 'bank_app:login' %}">Submit</a></button>-->
+<!--    </form>-->
+<!--    </pre>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+
+</head>
+<body>
+<pre>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.errors }}
+        <label for="username">Username:</label> <input type="text" id="username" name="username" value="{{ form.username.value }}" required>
+
+        <label for="password">Password:</label> <input type="password" id="password" name="password" required>
+
+        <label for="confirm_password">Confirm Password:</label> <input type="password" id="confirm_password" name="confirm_password" required>
+
+                                    <button type="submit">Submit</button>
+    </form>
+    </pre>
+</body>
+</html>

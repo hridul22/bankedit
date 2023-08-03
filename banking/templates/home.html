@@ -1,0 +1,108 @@
+<!--{% load static %}-->
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>My Website</title>-->
+<!--    &lt;!&ndash; Load Bootstrap CSS from static files &ndash;&gt;-->
+<!--    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div>-->
+<!--<nav class="navbar navbar-dark bg-dark">-->
+<!--  <a class="navbar-brand" href="#">-->
+<!--    <img src="{% static 'img/bank_logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">-->
+<!--    Bootstrap-->
+<!--  </a>-->
+<!--  <a class="btn btn-outline-success " href="">login</a>-->
+<!--  <a class="btn btn-outline-warning " href="">register</a>-->
+<!--        <li class="nav-item dropdown">-->
+<!--        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--          Branches-->
+<!--        </a>-->
+<!--        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+<!--          <a class="dropdown-item" href="#">Action</a>-->
+<!--          <a class="dropdown-item" href="#">Another action</a>-->
+<!--          <a class="dropdown-item" href="#">Something else here</a>-->
+<!--        </div>-->
+
+<!--</nav>-->
+
+
+<!--<script src="{% static 'js/bootstrap.min.js' %}"></script>-->
+
+<!--</div>-->
+<!--<div>-->
+<!--    <div class="container-fluid">-->
+<!--        <img src="{% static 'img/bank_logo.png' %}" width="100%" height="100%">-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div class="footer navbar-fixed-bottom my_footer ">-->
+<!--  <center><pre><b>-->
+<!--    Copyright 2023-2028 by Refines Data. All Rights Reserved.-->
+<!--               estore is Powered by hkc.-->
+<!--      </b>-->
+<!--  </pre>-->
+<!--      </center>-->
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
+{% load static %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<div>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="{% static 'img/bank_logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+      AVG Bank
+    </a>
+    <a class="btn btn-outline-success" href="{% url 'bank_app:login' %}">Login</a>
+    <a class="btn btn-outline-warning" href="{% url 'bank_app:register' %}">Register</a>
+    <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Branches
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kannur">kannur</a>
+        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kozhikode">kozhikode</a>
+        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Malappuram">MALAPPURAM</a>
+        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Wayanad_district">Wayanad</a>
+        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kasaragod">Kasaragod</a>
+      </div>
+    </li>
+  </nav>
+</div>
+
+<div>
+  <div class="container-fluid d-flex justify-content-center align-items-center">
+    <img src="{% static 'img/bank_logo.png' %}" width="100%" height=500px alt="Bank Image">
+
+    <a class="btn btn-danger position-absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%);" href="{% url 'bank_app:login'%}">LOGIN</a>
+  </div>
+</div>
+
+<div class="footer navbar-fixed-bottom my_footer">
+  <center>
+    <pre><b>
+      Copyright 2023-2028 by Refines Data. All Rights Reserved.
+                 estore is Powered by hkc.
+        </b></pre>
+  </center>
+</div>
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>
+
